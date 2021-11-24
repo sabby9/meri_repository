@@ -6,7 +6,8 @@
 #define sys_kernel_2d_memcpy 335
 
 int main(){
-  int row = 3,column = 3;
+  int row = 3;
+  int column = 3;
   float orignalmatrix[row][column] = {{1,1,1},{2,2,2},{3,3,3}};
   float copiedmatrix[row][column];
   long int x = syscall(sys_kernel_2d_memcpy,*orignalmatrix,*copiedmatrix,row,column);
